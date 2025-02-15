@@ -12,22 +12,25 @@ import Events3 from "./pages/EventSections/EventPage3.jsx";
 import Footer from "./components/Footer.jsx";
 
 function App() {
-  return (
-      <div>
-          <Navbar/>
-          <Routes>
-              <Route path={'/'} element={<Home/>}/>
-              <Route path={'/about'} element={<About/>}/>
-              <Route path={'/news'} element={<News/>}/>
-              <Route path={'/events'} element={<Events/>}/>
-              <Route path={'/projects'} element={<Projects/>}/>
-              <Route path={'/events/1'} element={<Events1/>}/>
-              <Route path={'/events/2'} element={<Events2/>}/>
-              <Route path={'/events/3'} element={<Events3/>}/>
-          </Routes>
-          <Footer/>
-      </div>
-  )
-}
+    return (
+        <div className="flex flex-col min-h-screen">
+            <Navbar/>
+            <div className="flex-grow">
+                <Routes>
+                    <Route path={'/'} element={<Home/>}/>
+                    <Route path={'/about'} element={<About/>}/>
+                    <Route path={'/news'} element={<News/>}/>
+                    <Route path={'/events'} element={<Events/>}/>
+                    <Route path={'/projects'} element={<Projects/>}/>
+                    <Route path={'/events/1'} element={<Events1/>}/>
+                    <Route path={'/events/2'} element={<Events2/>}/>
+                    <Route path={'/events/3'} element={<Events3/>}/>
+                </Routes>
+            </div>
+            <Footer/>
+        </div>
+    )
+  }
+  
 
 export default App
